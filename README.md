@@ -1,7 +1,7 @@
 # FindToDeskPass
 通过Dump内存读取ToDesk设备代码、连接密码
 
-测试版本：官网最新版4.74.8
+测试版本：官网最新版4.7.4.8
 
 # 通过Procdump 导出 ToDesk内存
 首先查看ToDesk进程PID
@@ -25,6 +25,22 @@ procdump64.exe -accepteula -ma 856
 连接密码在上方约224个字节位置。此处为`k4zeus0z`
 
 ![image](https://github.com/user-attachments/assets/dd5c181b-67b9-4d17-898a-c7877191478b)
+
+---------------------------------------------------------------------------
+2024年9月9日补充
+根据吐司论坛QAdmire师傅的反馈，4.7.4.3版本该位置对应不上（猜测该版本该位置为安装时间）
+
+不过还是可以搜索当前日期（黄色箭头指向），往上寻找发现密码
+
+![image](https://github.com/user-attachments/assets/5293a037-55ca-421e-aa30-214eec7700a7)
+
+不过我在4.7.4.8版本依旧是原来位置，反倒是更下方位置为安装时间
+
+所以猜测是版本不同带来的差异
+
+![image](https://github.com/user-attachments/assets/d2cbd9cc-8e91-41b9-8322-70ad69cda2ae)
+
+
 
 ## 使用安全密码也可读取
 方法一样，直接贴图
